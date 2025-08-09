@@ -1,0 +1,63 @@
+#:import MDAliasLabel aliasmd.aliasmd
+#:import MDAliasText aliasmd.aliasmd
+#:import farsi aliasmd.aliasmd.farsi
+
+<Login>:
+    name: "Login"
+    MDScreen:
+        md_bg_color: self.theme_cls.backgroundColor
+
+    MDCard:
+        pos_hint : {'center_x':0.5,'center_y':0.5}
+        size_hint:0.8,0.8
+        padding:25
+        elevation:10
+
+        MDBoxLayout:
+            orientation:'vertical'
+            cols:1
+            adaptive_height: True
+            spacing: "12dp"
+
+            Label:
+                id: lbl_msg
+                text:""
+                color:"red"
+
+            MDAliasText:
+                id: txt_username
+                required: True
+                max_text_length: 100
+                multiline: False
+                text:"samad"
+                MDTextFieldHintText:
+                    text:"Username"
+                MDTextFieldTrailingIcon:
+                    icon:"account"
+
+            MDAliasText:
+                id: txt_password
+                required: True
+                password:True
+                text:"@Jenmax135"
+                MDTextFieldHintText:
+                    text:"Password"
+                MDTextFieldTrailingIcon:
+                    icon:"eye-off"
+
+            MDButton:
+                id:btn_login
+                on_release: root.login_click()
+                MDButtonIcon:
+                    icon:"login"
+                    theme_icon_color:"Custom"
+                    icon_color:"yellow"
+                    icon_color_disabled:"black"
+
+                MDButtonText:
+                    text:"Login"
+                    theme_text_color:"Custom"
+                    filled: "white"
+                    tonal: "white"
+                    outlined: "green"
+                    elevated: "white"

@@ -1,0 +1,37 @@
+<Dashboard>:
+    name: "Dashboard"
+    <CommonNavigationRailItem>
+
+        MDNavigationRailItemIcon:
+            icon: root.icon
+
+        MDNavigationRailItemLabel:
+            text: root.text
+
+
+    MDBoxLayout:
+
+        MDNavigationRail:
+            id: rail
+
+            MDNavigationRailMenuButton:
+                icon: "menu"
+                on_release: app.open_menu(self)
+
+            MDNavigationRailFabButton:
+                icon: "home"
+
+            CommonNavigationRailItem:
+                icon: "folder-outline"
+                text: "Files"
+
+            CommonNavigationRailItem:
+                icon: "bookmark-outline"
+                text: "Bookmark"
+
+            CommonNavigationRailItem:
+                icon: "library-outline"
+                text: "Library"
+
+        MDScreen:
+            md_bg_color: self.theme_cls.secondaryContainerColor

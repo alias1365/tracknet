@@ -1,0 +1,42 @@
+MDScreen:
+    md_bg_color: self.theme_cls.backgroundColor
+
+    MDBoxLayout:
+        id: root_box
+        orientation: "vertical"
+        spacing: "12dp"
+        padding: "12dp"
+
+        MDIconButton:
+            on_release: app.open_menu(self)
+            icon: "menu"
+
+        ScrollView:
+
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: "32dp", 0, "32dp", "32dp"
+                spacing: "24dp"
+                adaptive_height: True
+
+                MDLabel:
+                    adaptive_height: True
+                    text: "Standard widget"
+
+                MDBoxLayout:
+                    id: widget_box
+                    adaptive_height: True
+                    spacing: "24dp"
+
+                Widget:
+                    size_hint_y: None
+                    height: "12dp"
+
+                MDLabel:
+                    adaptive_height: True
+                    text: "Custom widget"
+
+                MDBoxLayout:
+                    id: custom_widget_box
+                    adaptive_height: True
+                    spacing: "24dp"

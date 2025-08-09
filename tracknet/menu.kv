@@ -1,0 +1,58 @@
+WindowManager:
+    FirstWindow:
+    SecondWindow:
+
+<CommonNavigationRailItem>
+
+    MDNavigationRailItemIcon:
+        icon: root.icon
+
+    MDNavigationRailItemLabel:
+        text: root.text
+
+<FirstWindow>:
+    name: "first"
+
+    MDBoxLayout:
+
+        MDNavigationRail:
+            id: rail
+
+            MDNavigationRailMenuButton:
+                icon: "menu"
+                on_release: app.open_menu(self)
+
+            MDNavigationRailFabButton:
+                icon: "home"
+                on_release:app.root.current="second"
+
+            CommonNavigationRailItem:
+                icon: "folder-outline"
+                text: "Files"
+
+            CommonNavigationRailItem:
+                icon: "bookmark-outline"
+                text: "Bookmark"
+
+            CommonNavigationRailItem:
+                icon: "library-outline"
+                text: "Library"
+
+        MDScreen:
+            md_bg_color: self.theme_cls.secondaryContainerColor
+
+
+
+<SecondWindow>:
+    name: "second"
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width,root.height
+
+        Label:
+            text: "Second Screen"
+            font_size:32
+        Button:
+            text: "Go Back"
+            font_size:32
+            on_release:app.root.current="first"

@@ -1,0 +1,52 @@
+#: include ProjectKV/top_menu.kv
+#:import MDAliasLabel aliasmd.aliasmd
+#:import farsi aliasmd.aliasmd.farsi
+
+<MissionList>:
+    name:"MissionList"
+    BoxLayout:
+        orientation:"vertical"
+        TopMenu:
+
+        MDButton:
+            on_release: root.loadData_click()
+            MDButtonIcon:
+                icon:"refresh"
+                theme_icon_color:"Custom"
+                icon_color:"green"
+                icon_color_disabled:"black"
+
+            MDButtonText:
+                font_name:"/home/alias65/PycharmProjects/tracknet_app/ProjectKV/font/iransans.ttf"
+                text: "Load Data"
+                theme_text_color:"Custom"
+                filled: "white"
+                tonal: "white"
+                outlined: "green"
+                elevated: "white"
+
+        MDBoxLayout:
+            id:scollable
+            orientation:"vertical"
+            size_hint_y:0.9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

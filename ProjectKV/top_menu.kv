@@ -1,0 +1,17 @@
+
+<TopMenu@MDTopAppBar>:
+    type: "small"
+    size_hint_x: 1
+
+    MDTopAppBarLeadingButtonContainer:
+        MDActionTopAppBarButton:
+            icon: "menu"
+            on_release: root.open_menu(self)
+
+    MDTopAppBarTitle:
+        text: "TrackNet"
+
+
+    MDTopAppBarTrailingButtonContainer:
+        MDActionTopAppBarButton:
+            icon: "account-circle-outline"
